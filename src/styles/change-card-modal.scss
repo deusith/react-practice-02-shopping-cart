@@ -1,0 +1,58 @@
+@import "./variables.scss";
+
+.change-card-modal {
+  .content .buttons {
+    button {
+      &.cancel {
+        &,&:hover {
+          background-color: $color-white;
+        }
+      }
+
+      &.accept {
+        background-color: $color-yellow;
+      }
+    }
+  }
+  
+  .card-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $spacing-main;
+    cursor: pointer;
+    
+    &.-selected {
+      .radio-button {
+        background-color: $color-red;
+      }
+    }
+  }
+  
+  .fake-input,
+  .card-number{
+    height: 16px;
+    padding: 4px 0;
+  }
+
+  .fake-input {
+    margin-right: $spacing-main;
+    height: 16px;
+    width: 16px;
+    position: relative;
+    
+    > div {
+      height: 12px;
+      width: 12px;
+      border: 2px solid $color-red;
+      border-radius: 50%;
+      position: relative;
+      top: -1px;
+    }
+  }
+  
+  .card-number{
+    width: 180px;
+    font-family: monospace;
+  }
+}

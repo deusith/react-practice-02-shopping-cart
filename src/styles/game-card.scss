@@ -1,0 +1,61 @@
+@import "./variables.scss";
+
+.game-card {
+  position: relative;
+	display: inline-block;
+	max-width: 200px;
+	cursor: pointer;
+	
+	&:not(:last-child) {
+		margin-right: $spacing-main;
+	}
+	
+	.card-oversize {
+		transition: transform 50ms ease-in;
+		
+		&:hover{
+			transform: scale(1.05);
+		}
+	}
+  
+  .in-cart-alert {
+    position: absolute;
+    right: $spacing-half;
+    top: $spacing-half;
+    border: 2px solid $color-white;
+    
+    i {
+      top: 1px;
+      left: -0.5px;
+    }
+  }
+	
+	.cover {
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		
+		padding-bottom: $spacing-half;
+	}
+	
+	.footer {
+		> * {
+			margin-bottom: $spacing-half;
+		}
+
+		.name {
+			font-size: 1.0625rem;
+			font-weight: 600;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;  
+			overflow: hidden;
+		}
+		
+		.rounded-label {
+			font-size: 0.7rem;
+			padding: $spacing-quartr $spacing-half;
+		}
+	}
+} // .game-card

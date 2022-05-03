@@ -1,0 +1,37 @@
+@import "./variables.scss";
+
+.basic-input {
+	height: $spacing-2x;
+	width: 200px;
+	position: relative;
+	display: flex;
+	align-items: center;
+		
+	input {
+		width: 100%;
+		height: 100%;
+		border: none;
+		padding-left: $spacing-third;
+		padding-right: $spacing-third;
+		font-family: inherit;
+		outline: 1px solid $color-silver;
+	  border-radius: 5px;
+	  overflow: hidden;
+		transition: outline 75ms linear;
+		
+		&:focus,
+		&:active {
+			outline: 2px solid $color-dark-red;
+		}
+	}
+	
+	span {
+		position: absolute;
+		right: $spacing-third;
+		cursor: pointer;
+		
+		&.-hidden {
+			display: none;
+		}
+  }
+	}

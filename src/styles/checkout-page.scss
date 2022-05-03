@@ -1,0 +1,126 @@
+@import "./variables.scss";
+
+.checkout-page {
+  .cart {
+    margin: 0 auto;
+    max-width: 500px;
+    
+    .cart-total {
+      > div {
+        text-align: right;
+        padding: $spacing-third $spacing-main;
+        
+        &:last-child {
+          font-weight: 600;
+        }
+      }
+    }
+    
+    .cart-actions {
+      text-align: center;
+      
+      input {
+        display: inline-block;
+        width: 45px;
+        height: 29px;
+        border: none;
+        padding-left: $spacing-third;
+        padding-right: $spacing-third;
+        font-family: inherit;
+        outline: 1px solid $color-silver;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: outline 75ms linear;
+
+        &:focus,
+        &:active {
+          outline: 2px solid $color-dark-red;
+        }
+      }
+      
+      button,
+      button:active, 
+      button:focus,
+      button:hover {
+        background-color: $color-yellow;
+        border-color: $color-yellow;
+        border-style: solid;
+        color: $color-black;
+        margin-left: $spacing-2x;
+        font-size: 14px;
+        height: 32px;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        
+        &[disabled] {
+          background-color: $color-gainsboro;
+          border-color: $color-gainsboro;
+        }
+        
+        i {
+          margin-left: $spacing-half;
+        }
+      }
+      
+      a {
+        display: inline-block;
+        margin-top: $spacing-main;
+        font-size: 12px;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  } // .cart
+  
+  .checkout-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacing-half;
+    padding: $spacing-main;
+    
+    > *:not(:last-child) {
+      margin-right: $spacing-main
+    }
+      
+    .cover {
+      height: $spacing-3x;
+      width: $spacing-4x;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+    
+    .name {
+      flex-grow: 1;
+      font-weight: 600;
+    }
+    
+    .price {
+      margin-bottom: $spacing-third;
+    }
+    
+    .extras {
+      text-align: right;
+    }
+    
+    .remove {
+      border-radius: 3px;
+      padding: $spacing-third;
+      background-color: $color-gainsboro;
+      font-size: 11px;
+      color: $color-dark-gray;
+      cursor: pointer;
+      transition: all linear 75ms;
+      
+      span {
+        margin-left: $spacing-third;
+      }
+      
+      &:hover {
+        background-color: $color-yellow;
+        color: $color-black;
+      }
+    }
+  }
+}

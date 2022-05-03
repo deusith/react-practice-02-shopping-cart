@@ -1,0 +1,32 @@
+@import "./variables.scss";
+
+.rounded-label {
+	display: inline-block;
+	color: $color-white;
+	background-color: $color-dark-red;
+	border-radius: $spacing-main;
+
+	&:not(:last-child) {
+		margin-right: $spacing-half;
+	}
+	
+	&:hover {
+		.fa-xmark {
+			background-color: $color-white;
+			color: $color-dark-red;
+		}
+	}
+	
+	.fa-xmark {
+		height: 1.1em;
+		width: 1.1em;
+		margin-left: $spacing-half;
+		position: relative;
+		top: 1px;
+		border-radius: 50%;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+    cursor: pointer;
+	}
+}

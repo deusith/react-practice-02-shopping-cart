@@ -1,0 +1,16 @@
+@import "./variables.scss";
+
+.catalog-navigation {
+	display: flex;
+	margin-bottom: $spacing-main;
+	
+	.rounded-label {
+		padding: $spacing-half;
+		font-size: 0.875rem;
+	}
+	
+	.filters {
+		flex-grow: 1;
+		margin-left: $spacing-main;
+	}
+}

@@ -1,0 +1,13 @@
+@import "./variables.scss";
+
+.in-cart-alert {
+  position: absolute;
+  right: $spacing-half;
+  top: $spacing-half;
+  border: 2px solid $color-white;
+  
+  i {
+    top: 1px;
+    left: -0.5px;
+  }
+}

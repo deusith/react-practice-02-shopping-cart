@@ -1,0 +1,109 @@
+@import "./variables.scss";
+
+.product-page {
+  display: flex;
+  max-width: 90%;
+  margin: 0 auto;
+  
+  .product-cover {
+    margin-right: $spacing-2x;
+  }
+  
+  .product-data {
+    flex-basis: 100%;
+  }
+  
+  .product-name,
+  .product-details,
+  .product-desc {
+    margin-bottom: $spacing-main;
+  }
+  
+  .product-name {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: $spacing-3x;
+    position: relative;
+    
+    .in-cart-alert {
+      i {
+        position: relative;
+        left: -0.5px;
+        top: 1px;
+      }
+    }
+    
+    .close-product {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: $spacing-2x + $spacing-half;
+      height: $spacing-2x + $spacing-half;
+      cursor: pointer;
+      background-color: $color-gainsboro;
+      border-radius: 50%;
+      border-width: 0;
+      transition: all linear 75ms;
+
+      &:hover {
+        background-color: $color-yellow;
+
+        i {
+          color: $color-black;
+        }
+      }
+
+      i {
+        position: relative;
+        top: 1px;
+        color: $color-silver;
+        font-size: $spacing-main + $spacing-third;
+        transition: inherit;
+      }
+    }
+  }
+  
+  .product-details {
+    display: flex;
+    align-items: flex-end;
+
+    .price {
+      margin-right: $spacing-2x;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    
+    .rounded-label {
+      padding: 5px;
+    }
+  }
+  
+  .product-desc {
+    line-height: 1.3em;
+  }
+  
+  .product-purchase {
+    margin-top: $spacing-main;
+    
+    button,
+    button:active, 
+    button:focus,
+    button:hover {
+      display: block;
+      margin: 0 auto;
+      background-color: $color-yellow;
+      border-color: $color-yellow;
+      border-style: solid;
+      color: $color-black;
+      font-size: 24px;
+      padding: $spacing-main;
+      border-radius: 10px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
